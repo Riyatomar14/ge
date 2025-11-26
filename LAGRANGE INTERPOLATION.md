@@ -11,8 +11,7 @@ LagrangePolynomial[x0_, f0_] :=
          i + 1, n}]);];
   polynomial[x_] = Sum[L[k, x]*fi[[k]], {k, 1, n}];
   Return[polynomial[x]];]
-```
-```matlab
+
 nodes = {0, 1, 3};
 values = {1, 3, 55};
 LagrangePolynomial[x_] = LagrangePolynomial[nodes, values]
