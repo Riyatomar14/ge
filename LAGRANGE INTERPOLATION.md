@@ -11,10 +11,12 @@ LagrangePolynomial[x0_, f0_] :=
          i + 1, n}]);];
   polynomial[x_] = Sum[L[k, x]*fi[[k]], {k, 1, n}];
   Return[polynomial[x]];]
-
-nodes = {0, 1, 3};
-values = {1, 3, 55};
+nodes = {1, 3, 5, 7, 9};
+values = {N[Log[1]], N[Log[3]], N[Log[5]], N[Log[7]], N[Log[9]]};
 LagrangePolynomial[x_] = LagrangePolynomial[nodes, values]
+Simplify[%]
+Plot[{LagrangePolynomial[x], Log[x]}, {x, 1, 10}, 
+ Ticks -> {Range[0, 10]}, PlotLegends -> "Expressions"]
 
 ```
 ```matlab
@@ -35,12 +37,10 @@ LagrangePolynomial[x0_, f0_] :=
          i + 1, n}]);];
   polynomial[x_] = Sum[L[k, x]*fi[[k]], {k, 1, n}];
   Return[polynomial[x]];]
-nodes = {1, 3, 5, 7, 9};
-values = {N[Log[1]], N[Log[3]], N[Log[5]], N[Log[7]], N[Log[9]]};
+
+nodes = {0, 1, 3};
+values = {1, 3, 55};
 LagrangePolynomial[x_] = LagrangePolynomial[nodes, values]
-Simplify[%]
-Plot[{LagrangePolynomial[x], Log[x]}, {x, 1, 10}, 
- Ticks -> {Range[0, 10]}, PlotLegends -> "Expressions"]
 ```
 ```matlab
 nodes = {-1, 0, 1, 2};
