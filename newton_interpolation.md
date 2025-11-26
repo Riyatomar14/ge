@@ -7,8 +7,7 @@ NDD[x0_, f0_, startindex_, endindex_] :=
 x = {0.5, 1.5, 3, 5, 6.5, 8};
 f = {1.625, 5.875, 31, 131, 282.125, 521};
 NDD[x, f, 1, 2]
-```
-```matlab
+
 NDDP[x0_, f0_] :=
   Module[{x1 = x0, f = f0, n, newtonPolynomial, k, j},
    n = Length[x1];
