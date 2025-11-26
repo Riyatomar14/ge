@@ -22,13 +22,13 @@ Plot[f[x], {x, -1, 3}]
 
 ```text
 ClearAll;
-x0 = Input["Enter initial guess:"];
-Nmax = Input["Enter maximum number of iterations:"];
-eps = Input[ "Enter the value of convergence parameter: "];
+x0 =1;
+Nmax =5;
+eps = 0.0001;
 Print["x0=", x0];
 Print["Nmax=", Nmax];
 Print["Epsilon =", eps];
-f[x_] := Cos[x] - x*Exp[x];
+f[x_] := Cos[x];
 Print["f[x] :=", f[x]];
 Print["f[x]:=", D[f[x], x]];
 For[i = 1, i <= Nmax, i++,
